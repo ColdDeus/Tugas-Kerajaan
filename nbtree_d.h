@@ -53,6 +53,11 @@ void PrintLineOfSuccession(nbAddr root);
 
 void WritePersonToFile(dataperson data);
 void ReadPersonFromFile(nbAddr *person);
+void Print_Raja(nbAddr person, char* searchedPerson);
+void nbLevelOrder(nbAddr root,int curLevel, int desLevel); // Levelorder traversing
+
+/* ---------------- PRINT TREE ---------------- */
+void nbPrint(nbAddr node, char tab[]);
 
 
 
