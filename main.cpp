@@ -6,10 +6,11 @@ int main() {
 	nbAddr king, person,search;
 	dataperson data;	
 	char nama [45],namaortu[45],namaraja [45];
-	char agama,jk,agamalol;
+	char agama,jk,agama1;
 	
 	FILE *file;
 	file = fopen("person.txt", "ab+");
+	
 	if(fread (&data, sizeof(data), 1, file) == NULL){
 		strcpy(data.name, "1");
 		data.roman = 'NULL';
@@ -33,6 +34,7 @@ int main() {
 		}
 		strcpy(data.status,"Alive");
 		strcpy(data.parentname,	"1");
+
 		WritePersonToFile(data);
 		fflush(stdin);
 		strcpy(namaraja,nama);
@@ -48,27 +50,25 @@ int main() {
 }
 
 
-
-
 void Input_Orang ()
 {
 	nbAddr king, person,search;
 	dataperson data;
 	char nama [45],namaortu[45],namaraja [45];
-	char agama,jk,agamalol;
+	char agama,jk,agama1;
 	
 	printf("Masukkan Nama : ");
 	scanf("%s",&nama);
 	strcpy(data.name, nama);
 	printf ("Apakah agamanya Kristen Protestan atau tidak ? (Y/N)");
-	agamalol = getch();		
-	//scanf ("%s",&agamalol);
-	if (agamalol == 'y' || agamalol == 'Y')
+	agama1 = getch();		
+	//scanf ("%s",&agama1);
+	if (agama1 == 'y' || agama1 == 'Y')
 		{
 			printf("Beragama Kristen Protestan");
 			data.roman = '0';
 		}
-		else if (agamalol == 'N' || agamalol == 'n')
+		else if (agama1 == 'N' || agama1 == 'n')
 		{
 			printf("Tidak beragama Kristen Protestan");
 			data.roman = '1';
@@ -101,7 +101,7 @@ void List_Pewaris()
 	nbAddr king, person,search;
 	dataperson data;	
 	char nama [45],namaortu[45],namaraja [45];
-	char agama,jk,agamalol;
+	char agama,jk,agama1;
 	nbCreate(&king);
 	if(!IsEmpty(king))
 	{
