@@ -153,7 +153,7 @@ int pil;
 		printf("\t||          3. Tampil Silsilah Keluarga       ||\n");
 		printf("\t||           4. Tampil List Pewaris           ||\n");
 		printf("\t||            5. Tampil List Raja             ||\n");
-		printf("\t||            6. Exit Program                 ||\n");
+		printf("\t||             6. Exit Program                ||\n");
 		printf("\t===============================================\n");
 		pil = getche();
 		printf("\n");
